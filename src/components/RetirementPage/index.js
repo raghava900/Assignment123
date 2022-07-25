@@ -3,28 +3,12 @@ import 'react-circular-progressbar/dist/styles.css'
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid} from 'recharts'
 import {Line} from 'rc-progress'
 
-import {
-  WelcomeContainer,
-  HeadingElement,
-  ParaElement,
-  HeadingElement1,
-  HeadingElement2,
-  ContainerRetirement,
-  WholeContainer,
-  WholeContainer1,
-  HrEle,
-  HrElement,
-  Select,
-  Container12,
-  Welcome,
-  Welcome1,
-  ExtraInfo,
-  ExtraUpdate,
-  Peer,
-  Vr,
-  ButtonElement,
-  ViewHelp,
-} from './styledComponents'
+import {AiFillHome} from 'react-icons/ai'
+import {GiButterfly} from 'react-icons/gi'
+import {BsPerson, BsSearch} from 'react-icons/bs'
+import {FaRegNewspaper, FaRegListAlt} from 'react-icons/fa'
+import {MdOutlineNotifications} from 'react-icons/md'
+import {IoIosLogOut} from 'react-icons/io'
 
 import './index.css'
 
@@ -46,123 +30,195 @@ const data = [
 ]
 
 const RetirementPage = () => (
-  <ContainerRetirement>
-    <Container12>
-      <HeadingElement>Retirement Income</HeadingElement>
-      <HeadingElement1>Starting Year 2056</HeadingElement1>
-      <WholeContainer1>
-        <WelcomeContainer>
-          <HeadingElement2>$300,000</HeadingElement2>
-          <ParaElement>My Goal</ParaElement>
-          <HrEle />
-        </WelcomeContainer>
-        <WelcomeContainer>
-          <HeadingElement2>59%</HeadingElement2>
-          <ParaElement>Goal Achieved</ParaElement>
-          <HrEle />
-        </WelcomeContainer>
-        <WelcomeContainer>
-          <HeadingElement2>$300</HeadingElement2>
-          <ParaElement>Est.Monthly Income</ParaElement>
-          <HrEle />
-        </WelcomeContainer>
-      </WholeContainer1>
-      <HeadingElement1>Contributions Overtime</HeadingElement1>
-      <BarChart width={400} height={200} data={data}>
-        <CartesianGrid />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Bar dataKey="x" stackId="a" fill="#192069" />
-        <Bar dataKey="y" stackId="a" fill="#0914e0" />
-        <Bar dataKey="z" stackId="a" fill="#6aa5d9" />
-      </BarChart>
-      <HeadingElement1>How do I compare to my peers?</HeadingElement1>
-      <ParaElement>
-        These numbers represent represent current goal achievement
-      </ParaElement>
-      <Peer>
-        <WholeContainer>
-          <HeadingElement1>
-            Age:
-            <span>
-              <Select>
-                <option value="" hidden>
-                  under 30
-                </option>
-                <option value="1">under 40</option>
-                <option value="2">under 50</option>
-              </Select>
-            </span>
-            <HrElement />
-          </HeadingElement1>
-          <HeadingElement1>
-            Salary:
-            <Select>
-              <option value="" hidden>
-                k20-k30
-              </option>
-              <option value="1">k40-k50</option>
-              <option value="2">k50-k60</option>
-            </Select>
-            <HrElement />
-          </HeadingElement1>
-          <HeadingElement1>
-            Gender:
-            <Select>
-              <option value="" hidden>
-                Male
-              </option>
-              <option value="1">Female</option>
-              <option value="2">Trans</option>
-            </Select>
-            <HrElement />
-          </HeadingElement1>
-        </WholeContainer>
+  <div className="container">
+    <div className="Icons">
+      <GiButterfly className="icons-spec" />
+      <AiFillHome />
+      <BsSearch />
+      <FaRegNewspaper />
+      <FaRegListAlt />
+      <BsPerson />
+      <MdOutlineNotifications />
+      <IoIosLogOut />
+    </div>
 
-        <WholeContainer1>
-          <WelcomeContainer style={{width: '12%', margin: '2%'}}>
-            <CircularProgressbar value={percentage} text={`${percentage}%`} />
-            <ParaElement>Average</ParaElement>
-          </WelcomeContainer>
-          <WelcomeContainer style={{width: '12%', margin: '2%'}}>
-            <CircularProgressbar value={percentage1} text={`${percentage1}%`} />
-            <ParaElement>Top</ParaElement>
-          </WelcomeContainer>
-          <WelcomeContainer style={{width: '12%', margin: '2%'}}>
-            <CircularProgressbar value={percentage2} text={`${percentage2}%`} />
-            <ParaElement>Me</ParaElement>
-          </WelcomeContainer>
-        </WholeContainer1>
-      </Peer>
-    </Container12>
-    <Welcome1>
-      <Welcome>
-        <HeadingElement1>Retirement Strategy</HeadingElement1>
-        <HeadingElement2>Employee contribution</HeadingElement2>
-        <Line percent={12} strokeWidth={1} strokeColor="#0b48e0" />
-        <HeadingElement2>Retirement Age</HeadingElement2>
-        <Line percent={12} strokeWidth={1} strokeColor="#0b48e0" />
-        <HeadingElement2>
-          Employer Contribution <span>8.4%</span>
-        </HeadingElement2>
-        <HeadingElement2>
-          Interest Rate <span>5%</span>
-        </HeadingElement2>
-        <ButtonElement>Update</ButtonElement>
-        <ViewHelp>view help Docs</ViewHelp>
-      </Welcome>
-      <ExtraInfo>
-        <Vr />
-        <ExtraUpdate>
-          <ParaElement>
-            Are you considering a <span>Housing Advance?</span>
-          </ParaElement>
-          <ParaElement>Limited time reduced interest</ParaElement>
-          <HeadingElement>Learn more</HeadingElement>
-        </ExtraUpdate>
-      </ExtraInfo>
-    </Welcome1>
-  </ContainerRetirement>
+    <div className="home-container-details">
+      <h1 className="HeadingElement2">Hi Mike,</h1>
+      <p className="ParaElement">Welcome back,</p>
+
+      <h1 className="HeadingElement2">Today</h1>
+      <h1 className="HeadingElement1">$19,982</h1>
+      <p className="ParaElement">Account Balance</p>
+      <h1 className="HeadingElement1">$4,000</h1>
+      <p className="ParaElement">year-to-Date Contributions</p>
+      <h1 className="HeadingElement1">$1,982</h1>
+      <p className="ParaElement">Total Interest</p>
+      <button className="ButtonElement" type="button">
+        {' '}
+        I want to
+      </button>
+
+      <h1 className="HeadingElement2">Recent Transactions</h1>
+      <p className="ParaElement">2020-08-07</p>
+      <h1 className="HeadingElement1">Withdrawal Transfer to Bank-XX11</h1>
+      <hr className="Hr" />
+      <p className="ParaElement">2020-07-21</p>
+      <h1 className="HeadingElement1">Withdrawal Transfer to Bank-XX11</h1>
+      <hr className="Hr" />
+      <p className="ParaElement">2020-07-16</p>
+      <h1 className="HeadingElement1">Withdrawal Transfer to Bank-XX11</h1>
+      <hr className="Hr" />
+      <div className="Icons1">
+        <AiFillHome />
+        <FaRegNewspaper />
+        <FaRegListAlt />
+        <BsPerson />
+        <BsSearch />
+      </div>
+    </div>
+    <div className="ContainerRetirement">
+      <div>
+        <div className="mobile">
+          <h1 className="HeadingElement">Retirement Income</h1>
+          <h1 className="HeadingElement1">Starting Year 2056</h1>
+          <div className="WholeContainer1">
+            <div className="WelcomeContainer">
+              <h1 className="HeadingElement2">$300,000</h1>
+              <p className="ParaElement">My Goal</p>
+              <hr className="HrEle" />
+            </div>
+            <div className="WelcomeContainer">
+              <h1 className="HeadingElement2">59%</h1>
+              <p className="ParaElement">Goal Achieved</p>
+              <hr className="HrEle" />
+            </div>
+            <div className="WelcomeContainer">
+              <h1 className="HeadingElement2">$300</h1>
+              <p className="ParaElement">Est.Monthly Income</p>
+              <hr className="HrEle" />
+            </div>
+          </div>
+          <h1 className="HeadingElement1">Contributions Overtime</h1>
+          <div className="Peer">
+            <p className="ParaElement">Employer:k 73,500</p>
+            <p className="ParaElement ">Employee:k 52,500</p>
+            <p className="ParaElement">Total Interest:k 244,313</p>
+          </div>
+
+          <BarChart width={400} height={200} data={data}>
+            <CartesianGrid />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Bar dataKey="x" stackId="a" fill="#192069" />
+            <Bar dataKey="y" stackId="a" fill="#0914e0" />
+            <Bar dataKey="z" stackId="a" fill="#6aa5d9" />
+          </BarChart>
+        </div>
+        <h1 className="HeadingElement1">How do I compare to my peers?</h1>
+        <p className="ParaElement">
+          These numbers represent represent current goal achievement
+        </p>
+        <div className="Peer">
+          <div className="WholeContainer">
+            <h1 className="HeadingElement1">
+              Age:
+              <span>
+                <select>
+                  <option value="" hidden>
+                    under 30
+                  </option>
+                  <option value="1">under 40</option>
+                  <option value="2">under 50</option>
+                </select>
+              </span>
+              <hr className="HrElement" />
+            </h1>
+            <h1 className="HeadingElement1">
+              Salary:
+              <select>
+                <option value="" hidden>
+                  k20-k30
+                </option>
+                <option value="1">k40-k50</option>
+                <option value="2">k50-k60</option>
+              </select>
+              <hr className="HrElement" />
+            </h1>
+            <h1 className="HeadingElement1">
+              Gender:
+              <select>
+                <option value="" hidden>
+                  Male
+                </option>
+                <option value="1">Female</option>
+                <option value="2">Trans</option>
+              </select>
+              <hr className="HrElement" />
+            </h1>
+          </div>
+
+          <div className="WholeContainer1">
+            <div
+              className="WelcomeContainer"
+              style={{width: '12%', margin: '2%'}}
+            >
+              <CircularProgressbar value={percentage} text={`${percentage}%`} />
+              <p className="ParaElement">Average</p>
+            </div>
+            <div
+              className="WelcomeContainer"
+              style={{width: '12%', margin: '2%'}}
+            >
+              <CircularProgressbar
+                value={percentage1}
+                text={`${percentage1}%`}
+              />
+              <p className="ParaElement">Top</p>
+            </div>
+            <div
+              className="WelcomeContainer"
+              style={{width: '12%', margin: '2%'}}
+            >
+              <CircularProgressbar
+                value={percentage2}
+                text={`${percentage2}%`}
+              />
+              <p className="ParaElement">Me</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="Welcome1">
+        <div className="Welcome">
+          <h1 className="HeadingElement1">Retirement Strategy</h1>
+          <h1 className="HeadingElement2">Employee contribution</h1>
+          <Line percent={12} strokeWidth={1} strokeColor="#0b48e0" />
+          <h1 className="HeadingElement2">Retirement Age</h1>
+          <Line percent={12} strokeWidth={1} strokeColor="#0b48e0" />
+          <h1 className="HeadingElement2">
+            Employer Contribution <span>8.4%</span>
+          </h1>
+          <h1 className="HeadingElement2">
+            Interest Rate <span>5%</span>
+          </h1>
+          <button className="ButtonElement" type="button">
+            Update
+          </button>
+          <p className="ViewHelp">view help Docs</p>
+        </div>
+        <div className="ExtraInfo">
+          <hr className="Vr" />
+          <div className="ExtraUpdate">
+            <p className="ParaElement">
+              Are you considering a <span>Housing Advance?</span>
+            </p>
+            <p className="ParaElement">Limited time reduced interest</p>
+            <h1 className="HeadingElement">Learn more</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 )
 
 export default RetirementPage

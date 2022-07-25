@@ -1,11 +1,11 @@
-import HomePage from './components/HomePage'
+import RetirementPage from './components/RetirementPage'
 
 import {GlobalStyle} from './styledComponents'
 
 const App = () => (
   <>
     <GlobalStyle />
-    <HomePage />
+    <RetirementPage />
   </>
 )
 
